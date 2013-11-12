@@ -1,0 +1,120 @@
+html
+    head
+        meta(charset="utf8")
+        link(rel="stylesheet", href="../reveal.js/css/reveal.min.css")
+        link(rel="stylesheet", href="custom.css")#theme
+        link(rel="stylesheet", href="../reveal.js/lib/css/zenburn.css")
+        title RTOS, IP Stack & Message serialization
+
+    body
+        .reveal
+            .slides
+                section
+                    h1 RTOS, Stack IP & Message serialization
+                    p Antoine
+                    p Patrick S.
+
+                section
+                    section
+                        h2 RTOS
+
+                    section
+                        h2 Fonction voulues
+                        ul
+                            li Multitasking
+                            li Preemptive scheduling
+                            li Priorities
+
+                    section
+                        h2 État actuel
+                        ul
+                            li Compile
+                            li Fonctionnel d'après les premiers test
+
+                    section
+                        h2 Que reste il à faire ?
+                        ol 
+                            li Écrire un guide sur le code multitask.
+                            li Rendre les modules existants thread safe.
+
+                section
+                    section
+                        h2 IP Stack
+
+                    section
+                        h2 Pourquoi une IP stack ?
+                        ul
+                            li Cool as fuck
+                            li Aggrandissable à nimporte quel nombre de boards / connexions
+                            li Debug facile avec un ordinateur (Wireshark)
+
+                    section
+                        h2 Où en est-on ?
+                        ul
+                            li Compilation
+                            li Port de tout ce qui est lié à l'OS (sémaphores, mailboxes, etc..)
+
+                    section
+                        h2 Qu'est-ce qu'il reste à faire ?
+                        ol
+                            li Modifier le driver UART pour le rendre utilisable avec la stack IP
+                            li Définir le moyen de communication entre nos robots
+                                ul
+                                    li WLAN
+                                    li Bluetooth
+                            li Tester
+
+                section
+                    section
+                        h2 Message serialization
+
+                    section
+                        h2 Pourquoi ?
+                        ul
+                            li Communiquer entre différents OS & plateformes
+                            li Différents languages de prog (C, Python, ...)
+                            li Éviter les répétitions de code
+
+                    section
+                        h2 Qu'est-ce qu'il va faire ?
+                        ul
+                            li Lis un fichier qui définis des structures
+                            li Crée du code pour différents langages permettant de :
+                            ul
+                                li Sérialiser la structure à partir de types natifs
+                                li Désérialiser à partir d'un flux de bytes vers les types natifs
+                                li Identifie le type du message à partir d'un hash de sa structure
+
+                    section
+                        h2 État actuel
+                        ul
+                            li Fichier de définition des structures lisibles et parsable
+                            li Génération du code en C fonctionnel mais incomplet
+
+                    section
+                        h2 Tâches restantes
+                        ol
+                            li Finir le générateur de C
+                            li Écrire le générateur Python
+                            li Documenter
+                          
+
+                section
+                    section
+                        h2 Planning
+                        ul
+                            li 13.11 - 25.11 : Écriture d'une démo pour la ville de Renens
+                            li 2 semaines : Test d'émission/réception avec le loopback
+                            li 2 semaines : Finir le driver UART et PPPoS avec Linux
+                            li 1 semaine : 30C3, écriture de doc
+                            li Nouvelle présentation à ce moment ?
+
+                        p Simultanément : écriture du message serialization (hors réunions)
+
+
+                section
+                    h2 #questions
+
+        script(src="../reveal.js/lib/js/head.min.js")
+        script(src="../reveal.js/js/reveal.min.js")
+        script(src="main.js")

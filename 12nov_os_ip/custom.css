@@ -22,7 +22,7 @@ body {
 
 ::selection {
   color: white;
-  background: #e7ad52;
+  background: #ecf0f1e7ad52g;
   text-shadow: none; }
 
 /*********************************************
@@ -59,7 +59,7 @@ b {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-  color: #e7ad52;
+  color: #ecf0f1e7ad52g;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
@@ -92,7 +92,7 @@ b {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #e7ad52;
+  border-color: #ecf0f1e7ad52g;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
@@ -100,19 +100,19 @@ b {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-  border-right-color: #e7ad52; }
+  border-right-color: #ecf0f1e7ad52g; }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-  border-left-color: #e7ad52; }
+  border-left-color: #ecf0f1e7ad52g; }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #e7ad52; }
+  border-bottom-color: #ecf0f1e7ad52g; }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-  border-top-color: #e7ad52; }
+  border-top-color: #ecf0f1e7ad52g; }
 
 .reveal .controls div.navigate-left.enabled:hover {
   border-right-color: #f3d7ac; }
@@ -133,7 +133,7 @@ b {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #e7ad52;
+  background: #f3d7ac;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);

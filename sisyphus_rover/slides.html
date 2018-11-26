@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Sisyphus,<br>a Landmine Mapping Rover</title>
+
+    <meta name="description" content="Sisyphus,<br>a Landmine Mapping Rover">
+
+          <meta name="author" content="CVRA" />
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../reveal.js//css/reveal.css">
+    <style type="text/css">
+      section.level2 > h2 {font-size: 150%;}
+      section.level1 > h2 {font-size: 200%;}
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: table-cell; vertical-align: middle; text-align: center; margin: auto;}
+    </style>
+          <link rel="stylesheet" href="../reveal.js//css/theme/black.css" id="theme">
+    
+    <!-- For syntax highlighting -->
+          <link rel="stylesheet" href="../reveal.js//lib/css/zenburn.css">
+    
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="../reveal.js//css/print/' +
+        ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) +
+        '.css" type="text/css" media="print">' );
+    </script>
+
+      </head>
+
+  <body>
+    
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h3>Sisyphus,<br>a Landmine Mapping Rover</h3>
+                      <h4>CVRA</h4>
+                    <p>
+            <h5>27.11.2018</h5>
+          </p>
+        </section>
+
+        
+        <section id="section" class="level1">
+        <h1></h1>
+        <section id="motivation" class="level2">
+        <h2>Motivation</h2>
+        <p>According to <a href="http://www.the-monitor.org/media/2918780/Landmine-Monitor-2018_final.pdf">“Landmine Monitor 2018”</a></p>
+        <ul>
+        <li>7’239 casualties in 2017:
+        <ul>
+        <li>2’793 deaths</li>
+        <li>4’431 injuries</li>
+        <li>15 unknown survival status</li>
+        </ul></li>
+        <li>60 states contaminated with antipersonnel mines</li>
+        </ul>
+        </section>
+        <section id="section-1" class="level2">
+        <h2></h2>
+        <p><img src="images/mine_casualties.png" alt="" title="" width="90%" /></p>
+        </section>
+        <section id="section-2" class="level2">
+        <h2></h2>
+        <p><img src="images/mine_contamination.png" alt="" title="" width="90%" /></p>
+        </section>
+        </section>
+        <section id="section-3" class="level1">
+        <h1></h1>
+        <section id="minesweepers-competition" class="level2">
+        <h2>Minesweepers competition</h2>
+        <p><img src="images/minesweepers.jpg" alt="" title="" width="90%" /></p>
+        </section>
+        <section id="whenwhere" class="level2">
+        <h2>When/Where?</h2>
+        <p><img src="images/iros2018.jpg" alt="" title="" width="80%" /></p>
+        </section>
+        <section id="rules" class="level2">
+        <h2>Rules</h2>
+        <ul>
+        <li>One or multiple robots</li>
+        <li>Autonomous or teleoperated</li>
+        <li>20 minutes to map 400m² outdoor looking for
+        <ul>
+        <li>Surface landmines</li>
+        <li>Underground landmines</li>
+        </ul></li>
+        <li>Not allowed to touch the mines</li>
+        </ul>
+        </section>
+        </section>
+        <section id="section-4" class="level1">
+        <h1></h1>
+        <section id="who-are-we" class="level2">
+        <h2>Who are we?</h2>
+        <p><img src="images/cvra.jpg" alt="" title="" width="70%" /></p>
+        </section>
+        <section id="how-many" class="level2">
+        <h2>How many?</h2>
+        <p><img src="images/team.jpg" alt="" title="" width="80%" /></p>
+        </section>
+        <section id="where" class="level2">
+        <h2>Where?</h2>
+        <p>Lausanne, Switzerland <img src="images/lausanne.jpg" alt="" title="" width="75%" /></p>
+        </section>
+        <section id="goal" class="level2">
+        <h2>Goal</h2>
+        <p>Build a rover for the competition in 3 months,<br>with 4 persons, and 500$ + parts</p>
+        </section>
+        </section>
+        <section id="section-5" class="level1">
+        <h1></h1>
+        <section id="enter-sisyphus" class="level2">
+        <h2>Enter Sisyphus</h2>
+        <p><img src="images/sisyphus.jpg" alt="" title="" width="70%" /></p>
+        </section>
+        </section>
+        <section id="section-6" class="level1">
+        <h1></h1>
+        <section id="mechanical-design" class="level2">
+        <h2>Mechanical design</h2>
+        <p><img src="images/mechanical-design.jpg" alt="" title="" width="65%" /></p>
+        </section>
+        <section id="rocker-bogie" class="level2">
+        <h2>Rocker-bogie</h2>
+        <p><img src="images/rocker-bogie.gif" alt="" title="" width="65%" /></p>
+        </section>
+        <section id="rocker-bogie-1" class="level2">
+        <h2>Rocker-bogie</h2>
+        <p><img src="images/rocker-bogie.jpg" alt="" title="" width="90%" /></p>
+        </section>
+        <section id="driving-electronics" class="level2">
+        <h2>Driving electronics</h2>
+        <ul>
+        <li>Driving wheels
+        <ul>
+        <li>powered by DC motors</li>
+        <li>controlled by Motor boards</li>
+        </ul></li>
+        <li>Steering servos
+        <ul>
+        <li>controlled by PWM outputs on the Master board</li>
+        </ul></li>
+        </ul>
+        </section>
+        </section>
+        <section id="section-7" class="level1">
+        <h1></h1>
+        <section id="detecting-buried-mines" class="level2">
+        <h2>Detecting buried mines</h2>
+        <p><img src="images/coil.jpg" alt="" title="" width="65%" /></p>
+        </section>
+        <section id="detecting-buried-mines-1" class="level2">
+        <h2>Detecting buried mines</h2>
+        <ul>
+        <li>Pulse-induction metal detector</li>
+        <li>3 coils on the front of the rover</li>
+        <li>Total span of 1m covered</li>
+        </ul>
+        </section>
+        <section id="detecting-surface-mines" class="level2">
+        <h2>Detecting surface mines</h2>
+        <p><img src="images/rgbd.jpg" alt="" title="" width="55%" /></p>
+        </section>
+        <section id="detecting-surface-mines-1" class="level2">
+        <h2>Detecting surface mines</h2>
+        <ul>
+        <li>Realsense D435</li>
+        <li>RGB + Depth converted to Point cloud</li>
+        <li>Point cloud segmented based on geometry
+        <ul>
+        <li>Remove the planar background</li>
+        <li>Cluster remaining points</li>
+        <li>Find cluster matching mine size range</li>
+        </ul></li>
+        </ul>
+        </section>
+        </section>
+        <section id="section-8" class="level1">
+        <h1></h1>
+        <section id="positioning-system" class="level2">
+        <h2>Positioning system</h2>
+        <p>Requirements</p>
+        <ul>
+        <li>Drift-free ➡ 🚫 INS or SLAM</li>
+        <li>High-accuracy (&lt;10cm) ➡ 🚫 GPS</li>
+        <li>Cheap (&lt;500$) ➡ 🚫 RTK GPS</li>
+        </ul>
+        </section>
+        <section id="ultra-wide-band-beacons" class="level2">
+        <h2>Ultra-Wide Band beacons</h2>
+        <div class="columns">
+        <div class="column" style="width:35%;">
+        <p><img src="images/uwb-beacon.jpg" /></p>
+        </div><div class="column" style="width:60%;">
+        <ul>
+        <li>Custom design</li>
+        <li>cm-level range measurement</li>
+        <li>High update rate (&gt;100Hz)</li>
+        <li>50$ per board</li>
+        <li>Open source</li>
+        </ul>
+        </div>
+        </div>
+        </section>
+        <section id="uwb-positioning-system" class="level2">
+        <h2>UWB positioning system</h2>
+        <p><img src="images/uwb-positioning.png" alt="" title="" width="80%" /></p>
+        </section>
+        <section id="uwb-positioning-system-1" class="level2">
+        <h2>UWB positioning system</h2>
+        <ul>
+        <li>Drift: None ✔</li>
+        <li>Positioning accuracy: 5cm ✔</li>
+        <li>Total cost: 250$ ✔</li>
+        <li>Bonus: works indoor and outdoor</li>
+        </ul>
+        </section>
+        </section>
+        <section id="section-9" class="level1">
+        <h1></h1>
+        <section id="system-design" class="level2">
+        <h2>System design</h2>
+        <p><img src="images/system.png" alt="" title="" width="90%" /></p>
+        </section>
+        <section id="cvra-can-stack" class="level2">
+        <h2>CVRA CAN stack</h2>
+        <p>Reusing our CAN boards</p>
+        <ul>
+        <li>UWB boards</li>
+        <li>Motor boards</li>
+        <li>IO board</li>
+        <li>CAN/USB adapter</li>
+        </ul>
+        </section>
+        <section id="uwb-board" class="level2">
+        <h2>UWB board</h2>
+        <div class="columns">
+        <div class="column" style="width:35%;">
+        <p><img src="images/uwb-beacon.jpg" /></p>
+        </div><div class="column" style="width:60%;">
+        <ul>
+        <li>Used for positioning</li>
+        <li>STM32F4 + ChibiOS + UAVCAN</li>
+        <li>50$ per board</li>
+        </ul>
+        </div>
+        </div>
+        </section>
+        <section id="motor-board" class="level2">
+        <h2>Motor board</h2>
+        <div class="columns">
+        <div class="column" style="width:40%;">
+        <p><img src="images/motor-board.jpg" /></p>
+        </div><div class="column" style="width:60%;">
+        <ul>
+        <li>Used for motor control</li>
+        <li>Hacked for metal detection</li>
+        <li>STM32F3 + ChibiOS + UAVCAN</li>
+        <li>35$ per board</li>
+        </ul>
+        </div>
+        </div>
+        </section>
+        <section id="io-board" class="level2">
+        <h2>IO board</h2>
+        <div class="columns">
+        <div class="column" style="width:40%;">
+        <p><img src="images/io-board.jpg" /></p>
+        </div><div class="column" style="width:60%;">
+        <ul>
+        <li>Used as RC receiver</li>
+        <li>STM32F3 + ChibiOS + UAVCAN</li>
+        <li>10$ per board</li>
+        </ul>
+        </div>
+        </div>
+        </section>
+        <section id="canusb-adapter" class="level2">
+        <h2>CAN/USB adapter</h2>
+        <div class="columns">
+        <div class="column" style="width:40%;">
+        <p><img src="images/can-adapter.jpg" /></p>
+        </div><div class="column" style="width:60%;">
+        <ul>
+        <li>Used as PC - CAN interface</li>
+        <li>STM32F3 + ChibiOS + UAVCAN</li>
+        <li>20$ per board</li>
+        </ul>
+        </div>
+        </div>
+        </section>
+        </section>
+        <section id="section-10" class="level1">
+        <h1></h1>
+        <section id="sisyphus-flies-to-madrid" class="level2">
+        <h2>Sisyphus flies to Madrid</h2>
+        <p><img src="images/sisyphus.jpg" alt="" title="" width="70%" /></p>
+        </section>
+        <section id="madrid" class="level2">
+        <h2>Madrid</h2>
+        <p><img src="images/madrid.jpg" /></p>
+        </section>
+        <section id="working-at-the-airbnb" class="level2">
+        <h2>Working at the Airbnb</h2>
+        <p><img src="images/airbnb.jpg" alt="" title="" width="80%" /></p>
+        </section>
+        <section id="on-the-field" class="level2">
+        <h2>On the field</h2>
+        <p><img src="images/trial.jpg" /></p>
+        </section>
+        <section id="best-design-award" class="level2">
+        <h2>Best Design Award</h2>
+        <p><img src="images/award.jpg" alt="" title="" width="60%" /></p>
+        </section>
+        <section id="iros" class="level2">
+        <h2>IROS</h2>
+        <div class="columns">
+        <div class="column" style="width:36%;">
+        <p><img src="images/iros-1.jpg" /></p>
+        </div><div class="column" style="width:64%;">
+        <p><img src="images/iros-2.jpg" /></p>
+        </div>
+        </div>
+        </section>
+        <section id="la-conquista-de-madrid" class="level2">
+        <h2>La conquista de Madrid</h2>
+        <p><img src="images/cvra-madrid.jpg" alt="" title="" width="65%" /></p>
+        </section>
+        </section>
+        <section id="section-11" class="level1">
+        <h1></h1>
+        <section id="conclusion" class="level2">
+        <h2>Conclusion</h2>
+        <div class="columns">
+        <div class="column" style="width:30%;">
+        <p><strong>Good</strong></p>
+        <ul>
+        <li>Modular Design</li>
+        <li>CAN bus</li>
+        <li>3D Printing</li>
+        <li>RGBD Camera</li>
+        </ul>
+        </div><div class="column" style="width:30%;">
+        <p><strong>Bad</strong></p>
+        <ul>
+        <li>Coil detector</li>
+        <li>Mechanical issues</li>
+        <li>Late integration</li>
+        <li>Lack of testing</li>
+        </ul>
+        </div>
+        </div>
+        </section>
+        </section>
+        <section id="section-12" class="level1">
+        <h1></h1>
+        <section id="we-open-source" class="level2">
+        <h2>We ❤ open-source!</h2>
+        <ul>
+        <li>Software &amp; Electronics <a href="https://github.com/cvra">github.com/cvra</a></li>
+        <li>Mechanical design <a href="https://grabcad.com/cvra-1">grabcad.com/cvra-1</a></li>
+        <li>CVRA CAN stack <a href="https://www.cvra.ch/robot-software">cvra.ch/robot-software</a></li>
+        </ul>
+        </section>
+        </section>
+        <section id="section-13" class="level1">
+        <h1></h1>
+        <section id="questions" class="level2" data-background-image="images/rgbd.jpg" data-background-opacity="0.8" data-background-size="60%">
+        <h2>Questions?</h2>
+        </section>
+        </section>
+      </div>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="../reveal.js//lib/js/head.min.js"></script>
+      <script src="../reveal.js//js/reveal.js"></script>
+
+      <script>
+        jQuery('section').removeAttr('id');
+        jQuery('section[target]')
+          .map(function(i, el) {
+            jQuery(el).find(el.attributes.target.value)
+              .map(function() {
+                jQuery(this).addClass('fragment ' + el.attributes['data-fragment'].value)
+              });
+          });
+        jQuery('section[data-bg_color]')
+          .map(function(i, el) {
+            jQuery(el).attr('data-background', el.attributes['data-bg_color'].value);
+          });
+      </script>
+
+      <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          // Push each slide change to the browser history
+          history: true,
+
+          // Optional reveal.js plugins
+          dependencies: [
+            { src: '../reveal.js//lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: '../reveal.js//plugin/zoom-js/zoom.js', async: true },
+            { src: '../reveal.js//plugin/notes/notes.js', async: true }
+          ]
+        });
+      </script>
+    </div>
+  </body>
+</html>
